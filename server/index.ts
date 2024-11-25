@@ -1,4 +1,4 @@
-import express from "express";
+import express, {Request,Response} from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import {WebSocketServer} from "ws";
@@ -13,6 +13,11 @@ app.use(express.json());
 const port=process.env.PORT as string;
 
 //Write HTTP routes here
+
+app.get("/hello",(_req:Request,res:Response)=>{
+    res.json({"message":"Hello"}) as Response;
+});
+
 
 const server= app.listen(port,()=>{
     console.log("Listening on Port ",port );
