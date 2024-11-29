@@ -15,7 +15,7 @@ const port=process.env.PORT as string;
 //Write HTTP routes here
 
 app.get("/hello",(_req:Request,res:Response)=>{
-    res.json({"message":"Hello"}) as Response;
+    res.json({"message":"Hello"}) ;
 });
 
 
